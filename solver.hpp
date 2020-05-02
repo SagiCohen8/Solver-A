@@ -27,6 +27,7 @@ namespace solver
     };
     const RealVariable &operator*(int r, const RealVariable &x);
     const RealVariable &operator==(const RealVariable &x, int r);
+    const RealVariable &operator==(const RealVariable &x, const RealVariable &x2);
     const RealVariable &operator-(const RealVariable &r, int d);
     const RealVariable &operator^(const RealVariable &x, int r);
 

@@ -16,24 +16,50 @@ TEST_CASE("linear equations"){
     CHECK(solve(3*x-12==0) == 4);
     CHECK(solve(2*x + 12 == 48) ==18);
     CHECK(solve(6*x-13 == 8+5*x) ==21);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-    CHECK(solve() ==);
-
-    for ( i = 0; i < 100; i++)
-    {
-        CHECK(solve(x^2)==7.0);
-    }
+    CHECK(solve(5*x+10==40) ==6);
+    CHECK(solve(3*x-8==-2) ==0);
+    CHECK(solve(-1*x/4==2) == -8);
+    CHECK(solve(4*x==x+12) ==4);
+    CHECK(solve(-3*(x+6)==3) ==-7);
+    CHECK(solve(-1*x+9==1) ==8);
+    CHECK(solve(2*x-6==8*x) ==-1);
+    CHECK(solve(x-5==3*x-6) ==0.5);
+    CHECK(solve(x+4==6) ==-10);
+    CHECK(solve(12*x==5*x+35) ==5);
+    CHECK(solve(-1*x==3*x-36) ==9);
+    CHECK(solve(x/3-x/5==2) ==15);
+    CHECK(solve(5*x-6 ==-16) ==-2);
+    CHECK(solve(x/3-x/10==x-23) ==30);
+    CHECK(solve(10*x==5*x-45) ==-9);
+    CHECK(solve(-12*x==-3*x-81) ==9);
+    CHECK(solve(6+10*x==x) ==-2/3);
+    CHECK(solve(-1*x-18==-2*x) ==18);
+    CHECK(solve(7*x-120==-19*x) ==-10);
+    CHECK(solve(-5*x-1==7*x) ==-1/12);
     
+}
+TEST_CASE("non-linear equations"){
+    RealVariable x;
+    CHECK(solve(3*(x^2)==27)==3);
+    CHECK(solve(3*(x^2)-15 == 60 )==5);
+    CHECK(solve(x^2+9==45) ==6);
+    CHECK(solve(3*(x^2)-30 == 45 )==5);
+    CHECK(solve(2*x+(x^2)+5.0==41+6.0*x/2-x) == 6);
+    CHECK((solve((x^2)==100)==10||solve((x^2)==100)==-10));
+    CHECK(solve((x^2)+9*x+9==180+0.0*x/2-x) ==9);
+    CHECK((solve(2*(x^2)==162)==9||solve(2*(x^2)==162)==-9));
+    CHECK((solve((x^2)==100)==10||solve((x^2)==100)==-10));
+    
+}
+
+TEST_CASE("Error throws"){
+    RealVariable x;
+    CHECK_THROWS(solve(3*x-3*x+1*x-1*x==20));
+    CHECK_THROWS(solve(0*x-7.0==30))
+    CHECK_THROWS(solve())
+
+
+
 
 
 

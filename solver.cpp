@@ -24,6 +24,10 @@ const solver::RealVariable& solver::operator==(const solver::RealVariable& x, in
 {
     return T;
 }
+const solver::RealVariable &solver::operator==(const solver::RealVariable &x, const solver::RealVariable &x2)
+{
+    return T;
+}
 
 const solver::RealVariable& solver::operator^(const solver::RealVariable& x, int r){
     return T;
