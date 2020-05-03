@@ -70,7 +70,7 @@ TEST_CASE("non-linear equations"){
     RealVariable x;
     CHECK(solve(3*(x^2)==27)==3);
     CHECK(solve(3*(x^2)-15 == 60 )==5);
-    CHECK(solve(x^2+9==45) ==6);
+    CHECK(solve((x^2)+9==45) ==6);
     CHECK(solve(3*(x^2)-30 == 45 )==5);
     CHECK(solve(2*x+(x^2)+5.0==41+6.0*x/2-x) == 6);
     CHECK((solve((x^2)==100)==10||solve((x^2)==100)==-10));

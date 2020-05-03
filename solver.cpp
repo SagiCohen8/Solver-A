@@ -53,9 +53,7 @@ const solver::RealVariable& solver::operator/(const solver::RealVariable& x1, in
 const solver::RealVariable& solver::operator-(const solver::RealVariable& x1, const solver::RealVariable& d1){
     return T;
 }
-const solver::RealVariable& solver::operator==(const solver::RealVariable& x1, const solver::RealVariable& x2){
-    return T;
-}
+
 ComplexVariable C;
 const solver::ComplexVariable& solver::operator*(int r, const ComplexVariable &x){ return C;}
 const solver::ComplexVariable& solver::operator^(const ComplexVariable &r1, int r2){ return C;}
